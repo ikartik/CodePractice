@@ -1,2 +1,2 @@
 # CodePractice
-Programming questions | DS-Algo
+Programming questions | DS-Algorithms | Interviews
