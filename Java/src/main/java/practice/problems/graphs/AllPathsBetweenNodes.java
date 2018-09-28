@@ -74,7 +74,7 @@ public class AllPathsBetweenNodes {
         g.addEdge(2, 1);
         g.addEdge(1, 3);
 
-        int s = 2;
+        int s = 0;
 
         int d = 3;
 

@@ -15,6 +15,7 @@ public class CheckBalancedTree { // Height difference between two subtrees never
         tree.right.left = new TreeNode(5);
         tree.right.right = new TreeNode(7);
 
+        System.out.println(checkBalanced(tree));
 
     }
 
