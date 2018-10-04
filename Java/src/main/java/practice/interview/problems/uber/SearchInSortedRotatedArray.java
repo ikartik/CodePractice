@@ -31,18 +31,6 @@ public class SearchInSortedRotatedArray {
 
         if (a[mid] == x)
             System.out.println(x + " found at index " + mid);
-        /*else if (a[mid] > x) {
-            if (a[r] > x)
-                binSearch(a, x, mid + 1, r);
-            else
-                binSearch(a, x, l, mid - 1);
-        } else if (a[mid] < x) {
-            if (a[l] < x)
-                binSearch(a, x, l, mid - 1);
-            else
-                binSearch(a, x, mid + 1, r);
-        }*/
-
         else if (a[l] <= a[mid]) {
             if (a[l] <= x && a[mid] >= x)
                 binSearch(a, x, l, mid - 1);
