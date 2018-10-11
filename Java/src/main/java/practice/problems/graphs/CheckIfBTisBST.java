@@ -21,7 +21,6 @@ public class CheckIfBTisBST {
 
         System.out.println(checkBST(tree));
 
-
     }
 
     static boolean checkBST(TreeNode root) {
