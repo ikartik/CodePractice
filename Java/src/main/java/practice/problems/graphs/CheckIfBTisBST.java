@@ -1,5 +1,7 @@
 package practice.problems.graphs;
 
+import java.util.ArrayList;
+
 /**
  * Created by kartik on 09/09/17.
  */
@@ -15,34 +17,30 @@ public class CheckIfBTisBST {
         tree.left.left = new TreeNode(1);
         tree.left.right = new TreeNode(3);
         tree.right.left = new TreeNode(5);
-        tree.right.right = new TreeNode(7);
+        tree.right.right = new TreeNode(8);
 
-        System.out.println(check(tree));
+        System.out.println(checkBST(tree));
 
 
     }
 
-    static void checkRec(TreeNode root, int arr[]){
-        if(root == null)
-            return ;
-        checkRec(root.left, arr);
-        arr[index++] = root.value;
-        checkRec(root.right, arr);
-    }
+    static boolean checkBST(TreeNode root) {
+        ArrayList<Integer> arr = new ArrayList();
+        inOrder(root, arr);
 
-    static boolean check(TreeNode tree){
-
-        int[] arr = new int[7];
-
-        checkRec(tree, arr);
-
-        int i = 0;
-        while(i < arr.length-1){
-            if(arr[i] > arr[i+1])
+        for(int i=0; i<arr.size()-1; i++){
+            if(arr.get(i) >= arr.get(i+1))
                 return false;
-            i++;
         }
         return true;
+    }
+
+    static void inOrder(TreeNode root, ArrayList<Integer> arr){
+        if(root == null)
+            return;
+        inOrder(root.left, arr);
+        arr.add(root.value);
+        inOrder(root.right, arr);
     }
 
 }
