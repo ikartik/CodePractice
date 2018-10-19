@@ -29,6 +29,8 @@ public class PrintLeafRightToLeft {
                 3   5   6
                      \
                      7
+
+              Output : 6 7 3
         */
 
         Tree tree = new Tree(1);
@@ -47,7 +49,7 @@ public class PrintLeafRightToLeft {
         if(tree == null)
             return;
         if(tree.left == null && tree.right == null)
-            System.out.println(tree.data + " ");
+            System.out.print(tree.data + " ");
         printLeaf(tree.right);
         printLeaf(tree.left);
 
