@@ -38,7 +38,7 @@ public class SumOfSubStringsOfANumber {
 
 //        String n = scanner.nextLine();
 
-        int result = substrings(String.valueOf(16));
+        int result = substrings(String.valueOf(100));
 
         System.out.println(result);
 //        bufferedWriter.write(String.valueOf(result));

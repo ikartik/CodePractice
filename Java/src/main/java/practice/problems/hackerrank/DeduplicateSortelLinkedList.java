@@ -16,16 +16,23 @@ public class DeduplicateSortelLinkedList {
 
         LinkedList list = new LinkedList();
         list.push(1);
-        list.push(2);
+        list.push(1);
+        list.push(1);
         list.push(3);
-        list.push(4);
+        list.push(5);
+        list.push(5);
         list.push(5);
         list.push(6);
         list.push(7);
-        list.push(8);
+        list.push(9);
         list.push(9);
 
         list.printList();
+
+        list.dedup();
+
+        list.printList();
+
 
     }
 
@@ -57,6 +64,21 @@ public class DeduplicateSortelLinkedList {
             System.out.println();
         }
 
+        void dedup() {
+            Node one = head;
+            if (one == null) return;
+            Node two = head.next;
+
+            while (two != null) {
+                if (one.data != two.data) {
+                    one.next = two;
+                    one = one.next;
+                } else {
+                    one.next = null;
+                }
+                two = two.next;
+            }
+        }
     }
 
 }
