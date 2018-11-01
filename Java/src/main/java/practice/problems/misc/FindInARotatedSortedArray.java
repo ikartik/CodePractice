@@ -14,7 +14,11 @@ public class FindInARotatedSortedArray {
         int[] arr = {15, 16, 19, 20, 25, 1, 3, 4, 5, 7, 10, 14};
         int x = 12;
 
-        binSearch(arr, x, 0, arr.length - 1);
+        for (int i = 0; i < arr.length; i++) {
+            binSearch(arr, arr[i], 0, arr.length - 1);
+        }
+
+//        binSearch(arr, x, 0, arr.length - 1);
     }
 
     public void binSearch(int[] arr, int x, int l, int r) {
